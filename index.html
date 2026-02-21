@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyorii | Digital Universe</title>
+    <!-- Meta Tags -->
+    <meta name="description"
+        content="Kyorii - Kreativitas digital tanpa batas. Jelajahi dunia estetika modern dan seni digital.">
+    <meta name="keywords" content="Kyorii, Digital Art, Vtuber, Aesthetic, Web Design">
+
+    <!-- CSS & Fonts -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Animated Background -->
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">KYORII</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Tentang</a></li>
+            <li><a href="#gallery">Galeri</a></li>
+            <li><a href="#contact">Kontak</a></li>
+        </ul>
+        <div class="nav-extra">
+            <a href="#" class="btn-primary" style="padding: 10px 20px; font-size: 0.9rem;">Join Community</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <span class="hero-tag">Digital Persona v1.0</span>
+            <h1>Explore the<br><span>Kyorii</span> Universe</h1>
+            <p>Seorang kreator digital yang menggabungkan teknologi, seni, dan estetika masa depan. Mari masuk ke dalam
+                dunia di mana imajinasi menjadi nyata.</p>
+            <div class="hero-btns">
+                <a href="#about" class="btn-primary">Mulai Penjelajahan</a>
+                <a href="#gallery" class="btn-secondary">Lihat Karya</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="aqml.png" alt="Kyorii Character">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="section-title">
+            <h2>Tentang Kyorii</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="about-grid">
+            <div class="card">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                <h3>Seni Digital</h3>
+                <p>Menciptakan visual yang memukau dengan sentuhan neon dan estetika futuristik yang unik.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-code"></i>
+                <h3>Pengembangan</h3>
+                <p>Membangun pengalaman interaktif yang mulus menggunakan teknologi web terbaru.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-heart"></i>
+                <h3>Komunitas</h3>
+                <p>Membangun ruang aman bagi para kreator untuk berbagi ide dan tumbuh bersama.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <div class="section-title">
+            <h2>Galeri Karya</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?auto=format&fit=crop&w=800&q=80"
+                    alt="Work 1">
+                <div class="gallery-overlay"><span>Project Neon</span></div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1633167606207-d840b5070fc2?auto=format&fit=crop&w=800&q=80"
+                    alt="Work 2">
+                <div class="gallery-overlay"><span>Cyberpunk Vibes</span></div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80"
+                    alt="Work 3">
+                <div class="gallery-overlay"><span>Digital Dream</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-socials">
+            <a href="#" class="social-link"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fa-brands fa-discord"></i></a>
+            <a href="#" class="social-link"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <p class="footer-copy">&copy; 2026 Kyorii Project. Dibuat dengan cinta dan kode.</p>
+    </footer>
+
+    <script>
+        // Simple Scroll Reveal
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal-active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card, .gallery-item, .section-title').forEach(el => {
+            el.classList.add('reveal');
+            observer.observe(el);
+        });
+    </script>
+</body>
+
+</html>
