@@ -475,10 +475,64 @@ footer {
     }
 }
 
+/* WhatsApp Floating Button */
+.wa-floating {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #25d366;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+    z-index: 9999;
+    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.wa-floating:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 15px 30px rgba(37, 211, 102, 0.5);
+    background: #20ba5a;
+}
+
+.wa-floating i {
+    font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .wa-floating {
+        bottom: 20px;
+        right: 20px;
+        padding: 12px;
+    }
+
+    .wa-floating span {
+        display: none;
+    }
+}
+
+/* PageSpeed & CLS Optimization */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero-image img {
+    aspect-ratio: 1/1;
+    object-fit: contain;
+}
+
 /* Fix for horizontal scroll "shaking" */
 html,
 body {
     max-width: 100vw;
     overflow-x: hidden;
     position: relative;
+    scroll-behavior: smooth;
 }
