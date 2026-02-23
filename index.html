@@ -6,6 +6,8 @@
     content="Kyorii, Digital Art, Vtuber, Aesthetic, Web Design, Web Developer, AI Art, Futuristic Web">
 <meta name="author" content="Kyorii">
 <meta name="robots" content="index, follow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="canonical" href="https://kyorii.world/">
 
 <!-- AI Overview & Open Graph -->
@@ -33,8 +35,10 @@
       "url": "https://kyorii.world/",
       "image": "https://kyorii.world/aqml.png",
       "sameAs": [
-        "https://twitter.com/kyorii",
-        "https://instagram.com/kyorii"
+        "https://facebook.com/kyorii",
+        "https://instagram.com/kyorii",
+        "https://discord.gg/kyorii",
+        "https://youtube.com/@kyorii"
       ],
       "jobTitle": "Digital Creator & Developer",
       "description": "Expert in combining technology, art, and futuristic aesthetics."
@@ -73,7 +77,33 @@
         <div class="nav-extra">
             <a href="#" class="btn-primary" style="padding: 10px 20px; font-size: 0.9rem;">Join Community</a>
         </div>
+        <!-- Hamburger Button (Mobile) -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle Menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-close" id="mobileClose" aria-label="Close Menu">&times;</button>
+        <ul class="mobile-nav-links">
+            <li><a href="#home" class="mobile-nav-link">Home</a></li>
+            <li><a href="#about" class="mobile-nav-link">Tentang</a></li>
+            <li><a href="#gallery" class="mobile-nav-link">Galeri</a></li>
+            <li><a href="#contact" class="mobile-nav-link">Kontak</a></li>
+        </ul>
+        <a href="#" class="btn-primary mobile-cta">Join Community</a>
+        <div class="mobile-menu-socials">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/aqmall.l?igsh=MXRkd3d3YmdieW16eA==" aria-label="Instagram"><i
+                    class="fa-brands fa-instagram"></i></a>
+            <a href="https://tiktok.com/@samurai_kyorii" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://www.youtube.com/@%EC%9B%94%EA%B4%91dKyorii" aria-label="YouTube"><i
+                    class="fa-brands fa-youtube"></i></a>
+        </div>
+    </div>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
@@ -145,16 +175,19 @@
     <!-- Footer -->
     <footer id="contact">
         <div class="footer-socials">
-            <a href="#" class="social-link" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" class="social-link" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
-            <a href="#" class="social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/aqmall.l?igsh=MXRkd3d3YmdieW16eA==" class="social-link"
+                aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="tiktok.com/@samurai_kyorii" class="social-link" aria-label="Discord"><i
+                    class="fa-brands fa-tiktok"></i></a>
+            <a href="https://www.youtube.com/@%EC%9B%94%EA%B4%91dKyorii" class="social-link" aria-label="YouTube"><i
+                    class="fa-brands fa-youtube"></i></a>
         </div>
         <p class="footer-copy">&copy; 2026 Kyorii Project. Dibuat dengan cinta dan kode.</p>
     </footer>
 
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/628123456789" class="wa-floating" target="_blank" rel="noopener noreferrer">
+    <a href="https://wa.me/6285177117450" class="wa-floating" target="_blank" rel="noopener noreferrer">
         <i class="fa-brands fa-whatsapp"></i>
         <span>Chat with Kyorii</span>
     </a>
@@ -176,6 +209,32 @@
         document.querySelectorAll('.card, .gallery-item, .section-title').forEach(el => {
             el.classList.add('reveal');
             observer.observe(el);
+        });
+
+        // Mobile Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileClose = document.getElementById('mobileClose');
+        const mobileLinks = document.querySelectorAll('.mobile-nav-links a, .mobile-cta');
+
+        function toggleMenu(open) {
+            hamburger.classList.toggle('active', open);
+            mobileMenu.classList.toggle('open', open);
+            document.body.classList.toggle('menu-open', open);
+            hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
+        }
+
+        hamburger.addEventListener('click', () => {
+            const isOpen = mobileMenu.classList.contains('open');
+            toggleMenu(!isOpen);
+        });
+
+        mobileClose.addEventListener('click', () => {
+            toggleMenu(false);
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => toggleMenu(false));
         });
     </script>
 </body>
