@@ -75,7 +75,6 @@
             <li><a href="#contact">Kontak</a></li>
         </ul>
         <div class="nav-extra">
-            <a href="#" class="btn-primary" style="padding: 10px 20px; font-size: 0.9rem;">Join Community</a>
         </div>
         <!-- Hamburger Button (Mobile) -->
         <button class="hamburger" id="hamburger" aria-label="Toggle Menu" aria-expanded="false">
@@ -109,12 +108,12 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <span class="hero-tag">Digital Persona v1.0</span>
-            <h1>Explore the<br><span>Kyorii</span> Universe</h1>
+            <h1>Explore the<br><span>Kyorii</span> Masa Depan</h1>
             <p>Seorang kreator digital yang menggabungkan teknologi, seni, dan estetika masa depan. Mari masuk ke dalam
                 dunia di mana imajinasi menjadi nyata.</p>
             <div class="hero-btns">
                 <a href="#about" class="btn-primary">Mulai Penjelajahan</a>
-                <a href="#gallery" class="btn-secondary">Lihat Karya</a>
+                <a href="#gallery" class="btn-secondary">Lihat Photo</a>
             </div>
         </div>
         <div class="hero-image">
@@ -130,19 +129,21 @@
         </div>
         <div class="about-grid">
             <div class="card">
-                <i class="fa-solid fa-wand-magic-sparkles"></i>
-                <h3>Seni Digital</h3>
-                <p>Menciptakan visual yang memukau dengan sentuhan neon dan estetika futuristik yang unik.</p>
+                <i class="fa-solid fa-guitar"></i>
+                <h3>Pemain Gitar</h3>
+                <p>Mendalami seni musik dengan bermain gitar, mengekspresikan emosi melalui melodi dan harmoni yang
+                    memukau.</p>
             </div>
             <div class="card">
-                <i class="fa-solid fa-code"></i>
-                <h3>Pengembangan</h3>
-                <p>Membangun pengalaman interaktif yang mulus menggunakan teknologi web terbaru.</p>
+                <i class="fa-solid fa-trophy"></i>
+                <h3>Pencapaian</h3>
+                <p>Berpengalaman dari tier Mythical Glory hingga turnamen dengan winrate dan statistik yang memuaskan.
+                </p>
             </div>
             <div class="card">
-                <i class="fa-solid fa-heart"></i>
-                <h3>Komunitas</h3>
-                <p>Membangun ruang aman bagi para kreator untuk berbagi ide dan tumbuh bersama.</p>
+                <i class="fa-solid fa-users"></i>
+                <h3>Mabar Komunitas</h3>
+                <p>Aktif bermain bersama skuad dan komunitas, membangun tim yang solid untuk mencapai kemenangan.</p>
             </div>
         </div>
     </section>
@@ -150,25 +151,25 @@
     <!-- Gallery Section -->
     <section id="gallery">
         <div class="section-title">
-            <h2>Galeri Karya</h2>
+            <h2>Galeri Saya</h2>
             <div class="underline"></div>
         </div>
         <div class="gallery-grid">
             <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?auto=format&fit=crop&w=800&q=80"
-                    alt="Work 1">
-                <div class="gallery-overlay"><span>Project Neon</span></div>
+                <img src="img/1.jpg" alt="Work 1">
+                <div class="gallery-overlay"><span>Photo My</span></div>
             </div>
             <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1633167606207-d840b5070fc2?auto=format&fit=crop&w=800&q=80"
-                    alt="Work 2">
-                <div class="gallery-overlay"><span>Cyberpunk Vibes</span></div>
+                <img src="img/2.jpg" alt="Work 2">
+                <div class="gallery-overlay"><span>Photo My</span></div>
             </div>
             <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80"
-                    alt="Work 3">
+                <img src="img/3.jpg" alt="Work 3">
                 <div class="gallery-overlay"><span>Digital Dream</span></div>
             </div>
+        </div>
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="gallery.html" class="btn-primary">Lihat Koleksi Lengkap</a>
         </div>
     </section>
 
@@ -185,6 +186,54 @@
         </div>
         <p class="footer-copy">&copy; 2026 Kyorii Project. Dibuat dengan cinta dan kode.</p>
     </footer>
+
+    <!-- Scroll to Top Button -->
+    <style>
+        .scroll-top-btn {
+            position: fixed;
+            bottom: 90px;
+            right: 30px;
+            background: var(--primary);
+            color: var(--bg-dark);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1.5rem;
+            z-index: 9998;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 20px rgba(0, 242, 255, 0.3);
+        }
+
+        .scroll-top-btn:hover {
+            transform: translateY(-5px);
+            background: #00d2dd;
+            color: var(--bg-dark);
+        }
+
+        .scroll-top-btn.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        @media (max-width: 768px) {
+            .scroll-top-btn {
+                bottom: 80px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+    <a href="#home" class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
 
     <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/6285177117450" class="wa-floating" target="_blank" rel="noopener noreferrer">
@@ -235,6 +284,20 @@
 
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => toggleMenu(false));
+        });
+
+        // Scroll to Top Logic
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollTopBtn.classList.add('show');
+            } else {
+                scrollTopBtn.classList.remove('show');
+            }
+        });
+        scrollTopBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     </script>
 </body>

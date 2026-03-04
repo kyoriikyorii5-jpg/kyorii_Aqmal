@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <title>Kyorii | Digital Universe - Gallery</title>
+    <!-- Basic SEO -->
+    <meta name="description"
+        content="Kyorii - Digital universe connecting high-end technology with futuristic art. Specialist in digital art, web development, and community building.">
+    <meta name="keywords"
+        content="Kyorii, Digital Art, Vtuber, Aesthetic, Web Design, Web Developer, AI Art, Futuristic Web">
+    <meta name="author" content="Kyorii">
+    <meta name="robots" content="index, follow">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://kyorii.world/gallery.html">
+
+    <!-- AI Overview & Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Kyorii | Gallery">
+    <meta property="og:description"
+        content="Explore the futuristic fusion of art and technology in the Kyorii digital universe.">
+    <meta property="og:url" content="https://kyorii.world/gallery.html">
+    <meta property="og:image" content="https://kyorii.world/aqml.png">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Favicon Optimization -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#0a0a0c">
+
+    <!-- PageSpeed Optimizations -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="style.css" as="style">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </noscript>
+    <style>
+        /* Push the gallery down since we don't have a hero section to occupy top space under the fixed nav */
+        #gallery {
+            padding-top: 120px;
+            min-height: 80vh;
+        }
+
+        .gallery-grid {
+            margin-bottom: 3rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Animated Background -->
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">KYORII</div>
+        <ul class="nav-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">Tentang</a></li>
+            <li><a href="gallery.html">Galeri</a></li>
+            <li><a href="index.html#contact">Kontak</a></li>
+        </ul>
+        <div class="nav-extra">
+        </div>
+        <!-- Hamburger Button (Mobile) -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle Menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-close" id="mobileClose" aria-label="Close Menu">&times;</button>
+        <ul class="mobile-nav-links">
+            <li><a href="index.html#home" class="mobile-nav-link">Home</a></li>
+            <li><a href="index.html#about" class="mobile-nav-link">Tentang</a></li>
+            <li><a href="gallery.html" class="mobile-nav-link">Galeri</a></li>
+            <li><a href="index.html#contact" class="mobile-nav-link">Kontak</a></li>
+        </ul>
+        <a href="#" class="btn-primary mobile-cta">Join Community</a>
+        <div class="mobile-menu-socials">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/aqmall.l?igsh=MXRkd3d3YmdieW16eA==" aria-label="Instagram"><i
+                    class="fa-brands fa-instagram"></i></a>
+            <a href="https://tiktok.com/@samurai_kyorii" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://www.youtube.com/@%EC%9B%94%EA%B4%91dKyorii" aria-label="YouTube"><i
+                    class="fa-brands fa-youtube"></i></a>
+        </div>
+    </div>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <div class="section-title">
+            <h2>Koleksi Lengkap Galeri</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="img/1.jpg" alt="Work 1">
+                <div class="gallery-overlay"><span>Photo 1</span></div>
+            </div>
+            <div class="gallery-item">
+                <img src="img/2.jpg" alt="Work 2">
+                <div class="gallery-overlay"><span>Photo 2</span></div>
+            </div>
+            <div class="gallery-item">
+                <img src="img/3.jpg" alt="Work 3">
+                <div class="gallery-overlay"><span>Digital Dream</span></div>
+            </div>
+            <div class="gallery-item">
+                <img src="img/4.jpg" alt="Work 4">
+                <div class="gallery-overlay"><span>Aesthetic View</span></div>
+            </div>
+            <div class="gallery-item">
+                <img src="img/5.jpg" alt="Work 5">
+                <div class="gallery-overlay"><span>Cyberpunk Art</span></div>
+            </div>
+            <div class="gallery-item">
+                <img src="img/6.jpg" alt="Work 6">
+                <div class="gallery-overlay"><span>Future Vision</span></div>
+            </div>
+            <div class="gallery-item">
+                <img src="img/7.jpg" alt="Work 7">
+                <div class="gallery-overlay"><span>Neon City</span></div>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="index.html" class="btn-secondary">Kembali ke Beranda</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-socials">
+            <a href="#" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/aqmall.l?igsh=MXRkd3d3YmdieW16eA==" class="social-link"
+                aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="tiktok.com/@samurai_kyorii" class="social-link" aria-label="Discord"><i
+                    class="fa-brands fa-tiktok"></i></a>
+            <a href="https://www.youtube.com/@%EC%9B%94%EA%B4%91dKyorii" class="social-link" aria-label="YouTube"><i
+                    class="fa-brands fa-youtube"></i></a>
+        </div>
+        <p class="footer-copy">&copy; 2026 Kyorii Project. Dibuat dengan cinta dan kode.</p>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/6285177117450" class="wa-floating" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>Chat with Kyorii</span>
+    </a>
+
+    <script>
+        // Simple Scroll Reveal
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal-active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card, .gallery-item, .section-title').forEach(el => {
+            el.classList.add('reveal');
+            observer.observe(el);
+        });
+
+        // Mobile Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileClose = document.getElementById('mobileClose');
+        const mobileLinks = document.querySelectorAll('.mobile-nav-links a, .mobile-cta');
+
+        function toggleMenu(open) {
+            hamburger.classList.toggle('active', open);
+            mobileMenu.classList.toggle('open', open);
+            document.body.classList.toggle('menu-open', open);
+            hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
+        }
+
+        hamburger.addEventListener('click', () => {
+            const isOpen = mobileMenu.classList.contains('open');
+            toggleMenu(!isOpen);
+        });
+
+        mobileClose.addEventListener('click', () => {
+            toggleMenu(false);
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => toggleMenu(false));
+        });
+    </script>
+</body>
+
+</html>
